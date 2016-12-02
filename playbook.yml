@@ -1,0 +1,46 @@
+---
+- hosts: all
+  tasks:
+    - name: Install libraries with homebrew
+      homebrew: name={{ item }} state=present
+      with_items:
+        - vim
+        - ag
+        - git
+        - rbenv
+        - ruby-build
+        - tmux
+        - zsh
+        - zsh-completions
+        - ctags
+        - gnupg
+        - graphviz
+        - htop
+        - node
+        - openssl
+        - pass
+        - tree
+        - watch
+        - coreutils
+        - postgresql
+
+    - name: Install libraries with homebrew cask
+      homebrew_cask: name={{ item }} state=present
+      with_items:
+        - iterm2
+        - macvim
+        - google-chrome
+        - firefox
+        - thunderbird
+        - atom
+        - caffeine
+        - dropbox
+        - github-desktop
+        - mattr-slate
+        - rowanj-gitx
+        - skype
+        - spotify
+        - vagrant
+        - virtualbox
+        - whatsapp
+        - slack
