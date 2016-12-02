@@ -23,6 +23,7 @@
         - watch
         - coreutils
         - postgresql
+        - emacs-plus
 
     - name: Install libraries with homebrew cask
       homebrew_cask: name={{ item }} state=present
