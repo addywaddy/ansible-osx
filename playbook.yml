@@ -24,6 +24,7 @@
         - coreutils
         - postgresql
         - emacs-plus
+        - leiningen
 
     - name: Install libraries with homebrew cask
       homebrew_cask: name={{ item }} state=present
@@ -47,3 +48,4 @@
         - slack
         - ethereum-wallet
         - wkhtmltopdf
+        - java
